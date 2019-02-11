@@ -1,15 +1,235 @@
-var TransTWD97$$module$Input_0=function(){this.a=6378137;this.b=6356752.314245;this.lng0=121;this.k0=.9999;this.dx=25E4;this.dy=0};
-TransTWD97$$module$Input_0.prototype.TWD97toWGS84=function(h,l){var f={},d=this.a,e=this.b,t=this.lng0,k=this.k0,c=this.dx,a=Math.sqrt(1-parseFloat(e)*parseFloat(e)/(parseFloat(d)*parseFloat(d))),b=parseFloat((parseFloat(d)-parseFloat(e))/(parseFloat(d)+parseFloat(e))),p=d/(1+b)*(1+.25*Math.pow(b,2)+.015625*Math.pow(b,4)+1/256*Math.pow(b,6)+25/16384*Math.pow(b,8)+49/65536*Math.pow(b,10));d=.5*b-2/3*Math.pow(b,2)+37/96*Math.pow(b,3)-1/360*Math.pow(b,4)-81/512*Math.pow(b,5)+96199/604800*Math.pow(b,
-6)-.13967600343088624*Math.pow(b,7)+.11728137696050643*Math.pow(b,8)-.07564682993845204*Math.pow(b,9)+.031220110524583594*Math.pow(b,10);e=1/48*Math.pow(b,2)+1/15*Math.pow(b,3)-437/1440*Math.pow(b,4)+46/105*Math.pow(b,5)-.2890188388723545*Math.pow(b,6)+51841/1209600*Math.pow(b,7)+.07104472954787625*Math.pow(b,8)-.0825257127682723*Math.pow(b,9)+.10655334542825998*Math.pow(b,10);var q=17/480*Math.pow(b,3)-37/840*Math.pow(b,4)-209/4480*Math.pow(b,5)+5569/90720*Math.pow(b,6)+.15952069210207231*Math.pow(b,
-7)-.3639893916847042*Math.pow(b,8)+.26628241074442655*Math.pow(b,9)-.04074740799829801*Math.pow(b,10),r=4397/161280*Math.pow(b,4)-11/504*Math.pow(b,5)-830251/7257600*Math.pow(b,6)+.1869933461600128*Math.pow(b,7)+.042295589017865495*Math.pow(b,8)-.24099671496199274*Math.pow(b,9)-.017036401873367607*Math.pow(b,10),n=4583/161280*Math.pow(b,5)-108847/3991680*Math.pow(b,6)-.1253518412047058*Math.pow(b,7)+.1838313515830877*Math.pow(b,8)+.20204924280973116*Math.pow(b,9)-.5153270518502853*Math.pow(b,10),
-m=.03233083094085698*Math.pow(b,6)-.031533210231126894*Math.pow(b,7)-.17070029912733595*Math.pow(b,8)+.2501531511367821*Math.pow(b,9)+.3279611048084538*Math.pow(b,10);b=.03973552796306703*Math.pow(b,7)-.03993272440972094*Math.pow(b,8)-.23917275861375797*Math.pow(b,9)+.34215442318796035*Math.pow(b,10);var g=l/(k*p);c=(h-c)/(k*p);k=g-(d*Math.sin(2*g)*Math.cosh(2*c)+e*Math.sin(4*g)*Math.cosh(4*c)+q*Math.sin(6*g)*Math.cosh(6*c)+r*Math.sin(8*g)*Math.cosh(8*c)+n*Math.sin(10*g)*Math.cosh(10*c)+m*Math.sin(12*
-g)*Math.cosh(12*c)+b*Math.sin(14*g)*Math.cosh(14*c));d=c-(d*Math.cos(2*g)*Math.sinh(2*c)+e*Math.cos(4*g)*Math.sinh(4*c)+q*Math.cos(6*g)*Math.sinh(6*c)+r*Math.cos(8*g)*Math.sinh(8*c)+n*Math.cos(10*g)*Math.sinh(10*c)+m*Math.cos(12*g)*Math.sinh(12*c)+b*Math.cos(14*g)*Math.sinh(14*c));c=Math.sin(k)/Math.sqrt(Math.pow(Math.sinh(d),2)+Math.pow(Math.cos(k),2));k=180*Math.atan(Math.sinh(d)/Math.cos(k))/Math.PI;d=Math.sinh(a*Math.atanh(a*c/Math.sqrt(1+Math.pow(c,2))));f.lat=180*Math.atan(c-(c*Math.sqrt(1+
-Math.pow(d,2))-d*Math.sqrt(1+Math.pow(c,2))-c)/((Math.sqrt((1+Math.pow(d,2))*(1+Math.pow(c,2)))-d*c)*(1-Math.pow(a,2))*Math.sqrt(1+Math.pow(c,2))/(1+(1-Math.pow(a,2))*Math.pow(c,2))))/Math.PI;f.lng=k+t;return f};
-TransTWD97$$module$Input_0.prototype.WGS84toTWD97=function(h,l){document.getElementById("outputResultLatTWD97");document.getElementById("outputResultLngTWD97");document.getElementById("outputResultLatTWD67");document.getElementById("outputResultLngTWD67");var f=this.a,d=this.b,e=this.lng0,t=this.k0,k=this.dx,c=Math.sqrt(1-parseFloat(d)*parseFloat(d)/(parseFloat(f)*parseFloat(f)));parseFloat(f);parseFloat(d);parseFloat(f);var a=parseFloat((parseFloat(f)-parseFloat(d))/(parseFloat(f)+parseFloat(d)));
-f=f/(1+a)*(1+.25*Math.pow(a,2)+.015625*Math.pow(a,4)+1/256*Math.pow(a,6)+25/16384*Math.pow(a,8)+49/65536*Math.pow(a,10));d=.5*a-2/3*Math.pow(a,2)+.3125*Math.pow(a,3)+41/180*Math.pow(a,4)-127/288*Math.pow(a,5)+7891/37800*Math.pow(a,6)+72161/387072*Math.pow(a,7)-.37350220064877804*Math.pow(a,8)+.20734471795083775*Math.pow(a,9)+.13112610577222847*Math.pow(a,10);var b=13/48*Math.pow(a,2)-.6*Math.pow(a,3)+557/1440*Math.pow(a,4)+281/630*Math.pow(a,5)-1.0248393063822752*Math.pow(a,6)+13769/28800*Math.pow(a,
-7)+.8497063021292622*Math.pow(a,8)-1.5144777515804302*Math.pow(a,9)+.529147493753463*Math.pow(a,10),p=61/240*Math.pow(a,3)-103/140*Math.pow(a,4)+15061/26880*Math.pow(a,5)+167603/181440*Math.pow(a,6)-2.311452098489859*Math.pow(a,7)+.9981064489137406*Math.pow(a,8)+2.96160312152402*Math.pow(a,9)-5.048584790534795*Math.pow(a,10),q=49561/161280*Math.pow(a,4)-179/168*Math.pow(a,5)+.9096203979276896*Math.pow(a,6)+97445/49896*Math.pow(a,7)-5.242170513235237*Math.pow(a,8)+2.0813957581770084*Math.pow(a,9)+
-9.193315354713942*Math.pow(a,10),r=34729/80640*Math.pow(a,5)-1.713007555715889*Math.pow(a,6)+1.6050354894430414*Math.pow(a,7)+4.184045119939217*Math.pow(a,8)-12.007258691441868*Math.pow(a,9)+4.451021280833884*Math.pow(a,10),n=.6650675310896665*Math.pow(a,6)-2.9586039924581593*Math.pow(a,7)+3.01475845168321*Math.pow(a,8)+9.05857555985681*Math.pow(a,9)-27.768859106101516*Math.pow(a,10);a=1.100069482745264*Math.pow(a,7)-5.3829705849063485*Math.pow(a,8)+5.940011659541811*Math.pow(a,9)+19.78528970152639*
-Math.pow(a,10);var m=parseFloat(h),g=parseFloat(l);m=m*Math.PI/180;e=(g-e)*Math.PI/180;g=Math.tan(Math.atan(Math.sinh(Math.asinh(Math.tan(m))-c*Math.atanh(c*Math.sin(m)))));c=Math.atan(g/Math.cos(e));e=Math.asinh(Math.sin(e)/Math.sqrt(g*g+Math.pow(Math.cos(e),2)));g={};k=Math.round(k+t*f*(e+d*Math.cos(2*c)*Math.sinh(2*e)+b*Math.cos(4*c)*Math.sinh(4*e)+p*Math.cos(6*c)*Math.sinh(6*e)+q*Math.cos(8*c)*Math.sinh(8*e)+r*Math.cos(10*c)*Math.sinh(10*e)+n*Math.cos(12*c)*Math.sinh(12*e)+n*Math.cos(14*c)*Math.sinh(14*
-e)));g.northingFix97=Math.round(t*f*(c+d*Math.sin(2*c)*Math.cosh(2*e)+b*Math.sin(4*c)*Math.cosh(4*e)+p*Math.sin(6*c)*Math.cosh(6*e)+q*Math.sin(8*c)*Math.cosh(8*e)+r*Math.sin(10*c)*Math.cosh(10*e)+n*Math.sin(12*c)*Math.cosh(12*e)+a*Math.sin(14*c)*Math.cosh(14*e)));g.eastingFix97=k;return g};TransTWD97$$module$Input_0.prototype.WGS84toTWD67=function(h,l){var f=this.WGS84toTWD97(h,l),d={},e=Math.round(f.eastingFix97-828);d.northingFix67=Math.round(f.northingFix97+207);d.eastingFix67=e;return d};
-TransTWD97$$module$Input_0.prototype.distance_TWD97=function(h,l,f,d){return Math.sqrt((h-f)*(h-f)+(l-d)*(l-d))/1E3};TransTWD97$$module$Input_0.prototype.distance_WGS84=function(h,l,f,d){h=h/180*Math.PI;f=f/180*Math.PI;return 6378100*Math.acos(Math.sin(f)*Math.sin(h)+Math.cos(f)*Math.cos(h)*Math.cos(d/180*Math.PI-l/180*Math.PI))/1E3};var $jscompDefaultExport$$module$Input_0=TransTWD97$$module$Input_0,module$Input_0={};module$Input_0["default"]=$jscompDefaultExport$$module$Input_0;
-©2009 Google - Terms of Service - Privacy Policy - Google Home
+class TransTWD97 {
+	constructor(){
+		this.a = parseFloat(6378137.0); //Equatorial Radius (地球赤道半徑) = 6378137.0 M
+		this.b = parseFloat(6356752.314245); //Polar Radius (地球兩極半徑) = 6356752.314245 M
+		this.lng0 = 121; //Taiwan central longitude (台灣中心經度) = 121 degree
+		this.k0 = 0.9999; // scaling size (縮放比例)
+		
+		this.dx = 250000; //橫座標平移量
+		this.dy = 0; //縱坐標平移量
+	}
+	TWD97toWGS84(inputTWD97X, inputTWD97Y) {
+	// load from UI
+		//let inputTWD97X = document.getElementById("inputTWD97X").value;
+		//let inputTWD97Y = document.getElementById("inputTWD97Y").value;
+	// output the result UI
+		let outputWGSData = {} ;
+		//let outputResultLatWGS84 = document.getElementById("outputResultLatWGS84");
+		//let outputResultLngWGS84 = document.getElementById("outputResultLngWGS84");
+		
+	// ============= Calculate Section =============
+	/*
+		let a = parseFloat(6378137.0); //Equatorial Radius (地球赤道半徑) = 6378137.0 M
+		let b = parseFloat(6356752.314245); //Polar Radius (地球兩極半徑) = 6356752.314245 M
+		let lng0 = 121; //Taiwan central longitude (台灣中心經度) = 121 degree
+		let k0 = 0.9999; // scaling size (縮放比例)
+
+		let dx = 250000; //橫座標平移量
+		let dy = 0; //縱坐標平移量
+	*/
+		let a = this.a;
+		let b = this.b;
+		let lng0 = this.lng0;
+		let k0 = this.k0;
+		let dx = this.dx;
+		let dy = this.dy;
+
+	// 參數：
+		let e = Math.sqrt(1 - ((parseFloat(b)*(parseFloat(b))/(parseFloat(a)*parseFloat(a)))));  
+	// 橢圓面積離心率 1<e<0
+
+		//let f = (parseFloat(a)-parseFloat(b))/parseFloat(a); //扁平率
+		let n =parseFloat( (parseFloat(a)-parseFloat(b))/(parseFloat(a)+parseFloat(b)));
+
+		let AA = (a/( 1 + n ) )*(1 + (1/4)* n**2 + (1/64)*n**4 + (1/256)*n**6 + (25/16384)*n**8 + (49/65536)*n**10);
+
+	//  ~~~~~~~Kruger Series~~~~~~~
+		let beta1 = (1/2)*n-(2/3)*n**2 + (37/96)*n**3 - (1/360)*n**4 - (81/512)*n**5 + (96199/604800)*n**6 - (5406467/38707200)*n**7 + (7944359/67737600)*n**8 - (7378753979/97542144000)*n**9 + (25123531261/804722688000)*n**10;
+		let beta2 = (1/48)*n**2 + (1/15)*n**3 - (437/1440)*n**4 + (46/105)*n**5 - (1118711/3870720)*n**6 + (51841/1209600)*n**7 + (24749483/348364800)*n**8 - (115295683/1397088000)*n**9 + (5487737251099/51502252032000)*n**10;
+		let beta3 = (17/480)*n**3 - (37/840)*n**4 - (209/4480)*n**5 + (5569/90720)*n**6 + (9261899/58060800)*n**7 - (6457463/17740800)*n**8 + (2473691167/9289728000)*n**9 - (852549456029/20922789888000)*n**10;
+		let beta4 = (4397/161280)*n**4 - (11/504)*n**5 - (830251/7257600)*n**6 + (466511/2494800)*n**7 + (324154477/7664025600)*n**8 - (937932223/3891888000)*n**9 - (89112264211/5230697472000)*n**10;
+		let beta5 = (4583/161280)*n**5 - (108847/3991680)*n**6 - (8005831/63866880)*n**7 + (22894433/124540416)*n**8 + (112731569449/557941063680)*n**9 - (5391039814733/10461394944000)*n**10;
+		let beta6 = (20648693/638668800)*n**6 -  (16363163/518918400)*n**7 - (2204645983/12915302400)*n**8 + (4543317553/18162144000)*n**9 + (54894890298749/167382319104000)*n**10;
+		let beta7 = (219941297/5535129600)*n**7 - (497323811/12454041600)*n**8 - (79431132943/332107776000)*n**9 + (4346429528407/12703122432000)*n**10;
+		let beta8 = (191773887257/3719607091200)*n**8 -  (17822319343/336825216000)*n**9 - (497155444501631/1422749712384000)*n**10;
+		let beta9 = (11025641854267/158083301376000)*n**9  - (492293158444691/6758061133824000)*n**10;
+		let beta10 = (7028504530429620/72085985427456000)*n**10;
+
+	// xi and eta
+		let xi = inputTWD97Y/(k0*AA);
+		let eta = (inputTWD97X-dx)/(k0*AA);
+		let xip = xi-(beta1*Math.sin(2*xi)*Math.cosh(2*eta)+beta2*Math.sin(4*xi)*Math.cosh(4*eta)+beta3*Math.sin(6*xi)*Math.cosh(6*eta)+beta4*Math.sin(8*xi)*Math.cosh(8*eta)+beta5*Math.sin(10*xi)*Math.cosh(10*eta)+beta6*Math.sin(12*xi)*Math.cosh(12*eta)+beta7*Math.sin(14*xi)*Math.cosh(14*eta));
+		let etap = eta-(beta1*Math.cos(2*xi)*Math.sinh(2*eta)+beta2*Math.cos(4*xi)*Math.sinh(4*eta)+beta3*Math.cos(6*xi)*Math.sinh(6*eta)+beta4*Math.cos(8*xi)*Math.sinh(8*eta)+beta5*Math.cos(10*xi)*Math.sinh(10*eta)+beta6*Math.cos(12*xi)*Math.sinh(12*eta)+beta7*Math.cos(14*xi)*Math.sinh(14*eta));
+		let taup = Math.sin(xip)/Math.sqrt(Math.sinh(etap)**2+Math.cos(xip)**2);
+
+	// Calculate for Lngitude
+		let lngr = Math.atan(Math.sinh(etap)/Math.cos(xip));
+		let lngd = lngr*180/Math.PI;
+		let resultLng = lngd+lng0;
+
+	// Calculate foe Latitude
+		let sigma0 = Math.sinh(e*Math.atanh(e*taup/Math.sqrt(1+taup**2)));
+		let f = taup*Math.sqrt(1+sigma0**2)-sigma0*Math.sqrt(1+taup**2)-taup;
+		let dfTauDtau =(Math.sqrt((1+sigma0**2)*(1+taup**2))-sigma0*taup)*(1-e**2)*Math.sqrt(1+taup**2)/(1+(1-e**2)*taup**2);
+		let taup1 = taup-f/dfTauDtau;
+		let resultLat = Math.atan(taup1)*180/Math.PI;
+		//alert(resultLng);
+		//alert(resultLat);
+		//outputResultLatWGS84.innerHTML="緯度： "+resultLat;
+		//outputResultLngWGS84.innerHTML="經度： "+resultLng;
+		outputWGSData.lat = resultLat;
+		outputWGSData.lng = resultLng;
+		return outputWGSData;
+	}
+	WGS84toTWD97(inputLat, inputLng) {
+
+		// load from UI
+		//let inputLat = document.getElementById("inputLat").value;
+		//let inputLng = document.getElementById("inputLng").value;
+		// output the result UI
+		let outputResultLatTWD97 = document.getElementById("outputResultLatTWD97");
+		let outputResultLngTWD97 = document.getElementById("outputResultLngTWD97");
+		let outputResultLatTWD67 = document.getElementById("outputResultLatTWD67");
+		let outputResultLngTWD67 = document.getElementById("outputResultLngTWD67");		
+
+
+	// ============= Calculate Section =============
+		/*
+		TWD97：
+		台灣使用的是2度分帶，以東經121度為中央經線。
+		*/
+
+		let a = this.a; //Equatorial Radius (地球赤道半徑) = 6378137.0 M
+		let b = this.b; //Polar Radius (地球兩極半徑) = 6356752.314245 M
+		let lng0 = this.lng0;; //Taiwan central longitude (台灣中心經度) = 121 degree
+		let k0 = this.k0; // scaling size (縮放比例)
+
+		let dx = this.dx; //橫座標平移量
+		let dy = this.dy; //縱坐標平移量
+
+	//參數：
+		let e = Math.sqrt(1 - ((parseFloat(b)*(parseFloat(b))/(parseFloat(a)*parseFloat(a)))));  
+		//橢圓面積離心率 1<e<0
+
+		let f = (parseFloat(a)-parseFloat(b))/parseFloat(a); //扁平率
+		let n =parseFloat( (parseFloat(a)-parseFloat(b))/(parseFloat(a)+parseFloat(b)));
+
+	//   ~~~~~~~Kruger Series~~~~~~~
+
+		//AA = =(a/( 1 + n ) )*(1 + (1/4)* n**2 + (1/64)*n**4 + (1/256)*n**6 + (25/16384)*n**8 + (49/65536)*n**10)
+		let AA = (a/( 1 + n ) )*(1 + (1/4)* n**2 + (1/64)*n**4 + (1/256)*n**6 + (25/16384)*n**8 + (49/65536)*n**10);
+
+		let alpha1 = (1/2)*n - (2/3)*n**2 + (5/16)*n**3 + (41/180)*n**4 - (127/288)*n**5 + (7891/37800)*n**6 + (72161/387072)*n**7 - (18975107/50803200)*n**8 + (60193001/290304000)*n**9 + (134592031/1026432000)*n**10;
+		
+		let alpha2 = (13/48)*n**2 - (3/5)*n**3 + (557/1440)*n**4 + (281/630)*n**5 - (1983433/1935360)*n**6 + (13769/28800)*n**7 + (148003883/174182400)*n**8 - (705286231/465696000)*n**9 + (1703267974087/3218890752000)*n**10;
+		
+		let alpha3 = (61/240)*n**3 - (103/140)*n**4 + (15061/26880)*n**5 + (167603/181440)*n**6 - (67102379/29030400)*n**7 + (79682431/79833600)*n**8 + (6304945039/2128896000)*n**9 -  (6601904925257/1307674368000)*n**10;
+
+		let alpha4 = (49561/161280)*n**4 - (179/168)*n**5 + (6601661/7257600)*n**6 + (97445/49896)*n**7 - (40176129013/7664025600)*n**8 + (138471097/66528000)*n**9 + (48087451385201/5230697472000)*n**10;
+
+		let alpha5 = (34729/80640)*n**5 - (3418889/1995840)*n**6 + (14644087/9123840)*n**7 +   (2605413599/622702080)*n**8 - (31015475399/2583060480)*n**9 +  (5820486440369/1307674368000)*n**10;
+
+		let alpha6 = (212378941/319334400)*n**6 - (30705481/10378368)*n**7 + (175214326799/58118860800)*n**8 + (870492877/96096000)*n**9 - (1328004581729000/47823519744000)*n**10;
+
+		let alpha7 = (1522256789/1383782400)*n**7 - (16759934899/3113510400)*n**8 + (1315149374443/221405184000)*n**9 + (71809987837451/3629463552000)*n**10;
+
+		let alpha8 = (1424729850961/743921418240)*n**8 -   (256783708069/25204608000)*n**9 + (2468749292989890/203249958912000)*n**10;
+
+		let alpha9 = (21091646195357/6080126976000)*n**9 - (67196182138355800/3379030566912000)*n**10;
+
+		let alpha10 = (77911515623232800/12014330904576000)*n**10;
+
+	// Load Latitude and Longitude
+		let lat = parseFloat(inputLat); // 浮點數計算
+		let lng = parseFloat(inputLng); // 浮點數計算
+		let latr = lat*Math.PI/180; // 弧度
+		let Dlng = lng-lng0;  // 經度與中央經線相差值
+		let Dlngr = Dlng*Math.PI/180; // 弧度
+	// conformal latitude
+		let confLat = Math.atan(Math.sinh(Math.asinh(Math.tan(latr))-e*Math.atanh(e*Math.sin(latr))));
+
+	// sigma
+		let sigma = Math.sinh(e*Math.atanh(e*Math.tan(latr)/Math.sqrt(1+Math.tan(latr)**2)));
+
+	// tau = tan(lat) , taup = tau' = tan(conLat) 
+		let tau = Math.tan(latr);	
+		let taup = Math.tan(confLat);
+	// xi = North direction, conformal Xi', 
+	// eta =  East direction, conformal eta.
+		let xip = Math.atan(taup/Math.cos(Dlngr));
+		let etap = Math.asinh(Math.sin(Dlngr)/Math.sqrt(taup*taup+(Math.cos(Dlngr)**2)));
+
+		let xi = xip+alpha1*Math.sin(2*xip)*Math.cosh(2*etap)+alpha2*Math.sin(4*xip)*Math.cosh(4*etap)+alpha3*Math.sin(6*xip)*Math.cosh(6*etap)+alpha4*Math.sin(8*xip)*Math.cosh(8*etap)+alpha5*Math.sin(10*xip)*Math.cosh(10*etap)+alpha6*Math.sin(12*xip)*Math.cosh(12*etap)+alpha7*Math.sin(14*xip)*Math.cosh(14*etap);
+		
+		let eta = etap+alpha1*Math.cos(2*xip)*Math.sinh(2*etap)+alpha2*Math.cos(4*xip)*Math.sinh(4*etap)+alpha3*Math.cos(6*xip)*Math.sinh(6*etap)+alpha4*Math.cos(8*xip)*Math.sinh(8*etap)+alpha5*Math.cos(10*xip)*Math.sinh(10*etap)+alpha6*Math.cos(12*xip)*Math.sinh(12*etap)+alpha6*Math.cos(14*xip)*Math.sinh(14*etap);
+		
+
+		let easting = k0*AA*eta;
+		let northing = k0*AA*xi;
+
+	// 取得南北緯與東西經
+
+		//let getNEWSId = document.getElementById("getNEWSId");
+		//let NSSelect = document.getElementById("NSSelect");
+		//let WESelect = document.getElementById("WESelect");
+		//let NSSelectIndex = NSSelect.selectedIndex;
+		let NSSelectIndex = 0;
+		//let NSSelectResult = NSSelect.options[NSSelectIndex].text;
+		//let WESelectIndex = WESelect.selectedIndex;
+		let WESelectIndex = 0;
+		//let WESelectResult = WESelect.options[WESelectIndex].text;
+		//let NSDirection; 
+		//let WEDirection;
+		//let northingFix97;
+		//let eastingFix97;
+		//let northingFix67;
+		//let eastingFix67;
+	
+		// N + E.
+		let NSDirection = 1; 
+		let WEDirection = 1;
+		let outputData97 ={};
+		let northingFix97 = Math.round(northing);
+		let eastingFix97 = Math.round(dx+(easting*1));
+
+		outputData97.northingFix97 = northingFix97;
+		outputData97.eastingFix97 = eastingFix97;
+
+		let northingFix67 =  Math.round(northingFix97+207);
+		let eastingFix67 =  Math.round(eastingFix97-828);
+		//outputResultLatTWD97.innerHTML ="TWD97 Y坐標： "+ northingFix97;
+		//outputResultLngTWD97.innerHTML ="TWD97 X坐標： "+ eastingFix97;
+		//outputResultLatTWD67.innerHTML ="TWD67 Y坐標： "+ northingFix67;
+		//outputResultLngTWD67.innerHTML ="TWD67 X坐標： "+ eastingFix67;
+		
+		return outputData97;		
+	}
+	WGS84toTWD67(inputLat, inputLng){
+		let dataTWD97 = this.WGS84toTWD97(inputLat, inputLng);
+		let outputData67 = {};
+		let northingFix67 =  Math.round(dataTWD97.northingFix97+207);
+		let eastingFix67 =  Math.round(dataTWD97.eastingFix97-828);
+		outputData67.northingFix67 = northingFix67;
+		outputData67.eastingFix67 = eastingFix67;
+		return outputData67;
+	}
+	distance_TWD97(origin_TWD97_X, origin_TWD97_Y, observation_TWD97_X, observation_TWD97_Y){
+		  let distance = Math.sqrt((origin_TWD97_X-observation_TWD97_X)*(origin_TWD97_X-observation_TWD97_X)+(origin_TWD97_Y-observation_TWD97_Y)*(origin_TWD97_Y-observation_TWD97_Y))/1000;
+		  return distance;
+	}
+	distance_WGS84(origin_lat, origin_lng, obervation_lat, obervation_lng){
+		// input origin point location 
+		let origin_point_pi_lat = (origin_lat/180)*Math.PI;
+		let origin_point_pi_lng = (origin_lng/180)*Math.PI;
+		// input observation point location data
+		let obervation_lat_pi = (obervation_lat/180)*Math.PI;
+		let obervation_lng_pi = (obervation_lng/180)*Math.PI;
+		let D = 6378100*Math.acos(Math.sin(obervation_lat_pi)*Math.sin(origin_point_pi_lat)+Math.cos(obervation_lat_pi)*Math.cos(origin_point_pi_lat)*Math.cos(obervation_lng_pi-origin_point_pi_lng));
+		let distance = D/1000;
+		return distance;
+	}
+
+}
+
+export default TransTWD97;
+
