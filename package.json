@@ -1,9 +1,11 @@
 {
   "name": "trans97",
-  "version": "0.1.2",
-  "description": "Convert our WGS84 data to TWD97 data ",
+  "version": "0.2.2",
+  "description": "Convert our WGS84 data to TWD97 data.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
