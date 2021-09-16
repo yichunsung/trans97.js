@@ -2,9 +2,9 @@ export type EquatorialRadius = number; // Equatorial Radius
 
 export type PolarRadius = number; // Polar Radius
 
-export type CentralLongitude = number; // central longitude
+export type CentralLongitude = number; // Central longitude
 
-export type ScalingSize = number; // scaling size
+export type ScalingSize = number; // Scaling size
 
 export type HorizontalCoordinateOffset = number; // horizontal coordinate offset
 
