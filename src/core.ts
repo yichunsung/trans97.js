@@ -1,22 +1,15 @@
-import {
-  EquatorialRadius,
-  PolarRadius,
-  CentralLongitude,
-  ScalingSize,
-  HorizontalCoordinateOffset,
-  VerticalCoordinateOffset
-} from './type/type';
+import { TWD97 } from './twd97';
 
 export class Trans97 {
 
-  public a: EquatorialRadius = 6378137.0;
-  public b: PolarRadius = 6356752.314245;
+  public service;
 
-  public lng0: CentralLongitude = 121;
-  public k0: ScalingSize = 0.9999;
-
-  public dx: HorizontalCoordinateOffset = 250000;
-  public dy: VerticalCoordinateOffset = 0;
+  constructor(options) {
+    const { type } = options;
+    if (type === 'twd97') {
+      this.service = new TWD97();
+    }
+  }
 
 
 }
