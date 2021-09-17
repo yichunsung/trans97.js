@@ -7,7 +7,7 @@ import {
   VerticalCoordinateOffset
 } from './type/type';
 
-export class Settings {
+export abstract class Settings {
 
   public a: EquatorialRadius = 6378137.0;
   public b: PolarRadius = 6356752.314245;

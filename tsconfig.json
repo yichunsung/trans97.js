@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "UMD",
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

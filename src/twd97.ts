@@ -1,10 +1,8 @@
 import { Settings } from './utils';
-
-
-export interface TWD97Dto {
-  x: number; // X axis output
-  y: number; // Y axis output
-}
+import {
+  TWD97Dto,
+  TWD97DistanceRequestObj
+} from './interfaces/twd97.interface';
 
 export class TWD97 extends Settings {
 
@@ -18,7 +16,7 @@ export class TWD97 extends Settings {
    * @param {number} lng [longitude]
    * @return { TWD97Dto }     [TWD97 data]
    */
-  getTWD97Location(lat: number, lng: number): TWD97Dto {
+  getLocation(lat: number, lng: number): TWD97Dto {
 
     const a = this.a; // Equatorial Radius = 6378137.0 M
     const b = this.b; // Polar Radius = 6356752.314245 M
@@ -92,5 +90,22 @@ export class TWD97 extends Settings {
     };
 
   }
+
+  /**
+   * [ getDistance ]
+   * @param  {TWD97DistanceRequestObj} observation [observation data]
+   * @return {number}                              [Distance]
+   */
+  getDistance(observation: TWD97DistanceRequestObj): number {
+    const {
+      originTwd97X,
+      originTwd97Y,
+      observationTwd97X,
+      observationTwd97Y
+    } = observation;
+    const distance: number = Math.sqrt((originTwd97X - observationTwd97X) * (originTwd97X - observationTwd97X) + (originTwd97Y - observationTwd97Y) * (originTwd97Y - observationTwd97Y)) / 1000;
+    return distance;
+  }
+
 }
 
