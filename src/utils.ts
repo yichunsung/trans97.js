@@ -18,6 +18,4 @@ export class Settings {
   public dx: HorizontalCoordinateOffset = 250000;
   public dy: VerticalCoordinateOffset = 0;
 
-  constructor() {}
-
 }

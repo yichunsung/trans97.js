@@ -22,7 +22,7 @@ export class TWD97 extends Settings {
 
     const a = this.a; // Equatorial Radius = 6378137.0 M
     const b = this.b; // Polar Radius = 6356752.314245 M
-    const lng0 = this.lng0;; //Taiwan central longitude = 121 degree
+    const lng0 = this.lng0; //Taiwan central longitude = 121 degree
     const k0 = this.k0; // scaling size 
 
     const dx = this.dx; // horizontal coordinate offset
