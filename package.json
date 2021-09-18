@@ -1,9 +1,12 @@
 {
   "name": "trans97",
-  "version": "0.1.2",
-  "description": "Convert our WGS84 data to TWD97 data ",
+  "version": "0.2.2",
+  "description": "Convert our WGS84 data to TWD97 data.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +32,9 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
     "ts-node": "^10.0.0"
   }
 }
