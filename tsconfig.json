@@ -25,5 +25,5 @@
       "es5"
     ]
   },
-  "exclude": ["lib", "**/*.test.ts", "**/migrations", "./knexfile.ts", "node_modules"]
+  "exclude": ["lib", "example", "**/*.test.ts", "**/migrations", "./knexfile.ts", "node_modules"]
 }
