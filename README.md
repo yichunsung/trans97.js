@@ -4,6 +4,8 @@
 
 ## JS package Usage
 
+### Install
+
 ```bash
 $ npm install trans97
 ```
