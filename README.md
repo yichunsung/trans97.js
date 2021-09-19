@@ -2,7 +2,7 @@
 
 > Current Version: v1.0.0 RC version.
 
-## JS package Usage
+## Usage
 
 ### Install
 
