@@ -2,7 +2,7 @@
   "name": "trans97",
   "version": "1.0.0",
   "description": "Convert our WGS84 data to TWD97 data.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "types": "lib",
   "scripts": {
     "build": "tsc",
