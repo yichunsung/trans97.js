@@ -3,6 +3,7 @@
   "version": "0.2.2",
   "description": "Convert our WGS84 data to TWD97 data.",
   "main": "index.js",
+  "types": "lib",
   "scripts": {
     "build": "tsc",
     "prod": "rm -r lib && tsc -p .",
@@ -23,8 +24,8 @@
     "to",
     "WGS84"
   ],
-  "author": "YiChun Sung / YCSung.Studio",
-  "license": "ISC",
+  "author": "YiChun Sung / YCSung.Studio <ycsung.r@elk-tree.studio>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yichunsung/trans97.js/issues"
   },

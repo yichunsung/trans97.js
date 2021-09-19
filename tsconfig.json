@@ -10,6 +10,8 @@
     "moduleResolution": "node",
     "target": "es5",
     "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
     "outDir": "./lib/",
     "rootDir": "./src",
     "baseUrl": "./",
