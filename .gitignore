@@ -70,11 +70,12 @@ typings/
 # nuxt.js build output
 .nuxt
 
-# Nuxt generate
+# File generate
 dist
 
 # build
 build/
+lib/
 
 # vuepress build output
 .vuepress/dist

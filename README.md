@@ -2,10 +2,8 @@
 
 ## JS package Usage
 
-```bat
-
-npm install trans97
-
+```bash
+$ npm install trans97
 ```
 
 ## JS Documentation

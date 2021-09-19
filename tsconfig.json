@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "module": "UMD",
+    "module": "commonjs",
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es6",
     "sourceMap": true,
-    "outDir": "./dist/",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./lib/",
     "rootDir": "./src",
     "baseUrl": "./",
     "suppressImplicitAnyIndexErrors": true,
@@ -21,5 +25,5 @@
       "es5"
     ]
   },
-  "exclude": ["**/*.test.ts", "**/migrations", "./knexfile.ts", "node_modules"]
+  "exclude": ["lib", "example", "**/*.test.ts", "**/migrations", "./knexfile.ts", "node_modules"]
 }
