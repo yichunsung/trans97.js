@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "target": "es6",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./lib/",
+    "rootDir": "./src",
+    "baseUrl": "./",
+    "suppressImplicitAnyIndexErrors": true,
+    "paths": {
+      "*": ["types/*"]
+    },
+    "lib": [
+      "es2016",
+      "dom",
+      "es5"
+    ]
+  },
+  "exclude": ["lib", "example", "**/*.test.ts", "**/migrations", "./knexfile.ts", "node_modules"]
+}
