@@ -1,4 +1,4 @@
-import { Trans97 } from '../../lib/index.js';
+import { Trans97 } from '../../lib/index';
 
 const trans97 = new Trans97({
   type: 'wgs84'
