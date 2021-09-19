@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "module": "UMD",
+    "module": "commonjs",
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "moduleResolution": "node",
     "target": "es5",
     "sourceMap": true,

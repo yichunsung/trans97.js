@@ -14,5 +14,13 @@ export class Trans97 {
     }
   }
 
+  getLocation(data1, data2) {
+    return this.service.getLocation(data1, data2);
+  }
+
+  getDistance() {
+    return this.service.getDistance();
+  }
+
 
 }
