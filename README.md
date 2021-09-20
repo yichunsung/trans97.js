@@ -78,7 +78,13 @@ console.log(position);
 Using function distance_TWD97 to calculate the distance of 2 points by TWD97 data.
 
 ```js
-const distance97 = trans97.getDistance(252332, 2703394, 252340, 2703300); 
+const data = {
+  originTwd97X: 250000,
+  originTwd97Y: 2655023,
+  observationTwd97X: 250123,
+  observationTwd97Y: 2655059
+};
+const distance97 = trans97.getDistance(data); 
 ```
 
 ### Distance of WGS84
@@ -86,7 +92,13 @@ const distance97 = trans97.getDistance(252332, 2703394, 252340, 2703300);
 Using function distance_WGS84 to calculate the distance of 2 points by WGS84 data.
 
 ```js
-const distanceWGS84 = trans97.getDistance(24.436, 121.0229, 24.300, 121); 
+const wgs84Data = {
+  originLat: 24,
+  originLng: 121,
+  observationLat: 24.1,
+  observationLng: 121.3
+};
+const distanceWGS84 = trans97.getDistance(wgs84Data); 
 ```
 
 ## Contributing
