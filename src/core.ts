@@ -14,7 +14,7 @@ export class Trans97 extends Settings {
     if (type === 'twd97') {
       this.getLocation = new TWD97().getLocation;
       this.getDistance = new TWD97().getDistance;
-    } else if (type === 'wgs84') {
+    } else {
       this.getLocation = new WGS84().getLocation;
       this.getDistance = new WGS84().getDistance;
     }

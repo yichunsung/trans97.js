@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "./lib/",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["types/*"]
+    },
+    "types": ["jest", "node"]
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": ["lib", "example", "migrations", "seeds", "./knexfile.ts"]
+}
