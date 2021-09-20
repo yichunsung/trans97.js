@@ -6,7 +6,7 @@
 
 </p>
 
-> Current Version: v1.0.0 RC version.
+> Current Version: v1.0.2 RC version.
 
 ## Usage
 
