@@ -1,5 +1,31 @@
 # trans97.js
 
+<p align="center">
+
+![checks](https://img.shields.io/github/checks-status/yichunsung/trans97.js/master?style=flat-square)
+
+![coverage](https://img.shields.io/badge/coverage-100%25-brightgreen?style=flat-square)
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/yichunsung/trans97.js/Test%20Action?style=flat-square)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/68f7468f007b46e592c3cfc30e08bc7d)](https://www.codacy.com/gh/yichunsung/trans97.js/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yichunsung/trans97.js&amp;utm_campaign=Badge_Grade)
+
+![npm](https://img.shields.io/npm/v/trans97?style=flat-square)
+
+![npm type definitions](https://img.shields.io/npm/types/trans97?style=flat-square)
+
+![GitHub Release Date](https://img.shields.io/github/release-date/yichunsung/trans97.js?style=flat-square)
+
+![GitHub last commit](https://img.shields.io/github/last-commit/yichunsung/trans97.js?style=flat-square)
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/trans97?style=flat-square)
+
+![npm](https://img.shields.io/npm/dt/trans97?style=flat-square)
+
+![NPM](https://img.shields.io/npm/l/trans97?style=flat-square)
+
+</p>
+
 > Current Version: v1.0.0 RC version.
 
 ## Usage
