@@ -1,5 +1,7 @@
 # trans97.js
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7722e32d8b024b3ca9a614eb2779b6d6)](https://app.codacy.com/gh/yichunsung/trans97.js?utm_source=github.com&utm_medium=referral&utm_content=yichunsung/trans97.js&utm_campaign=Badge_Grade_Settings)
+
 > Current Version: v1.0.0 RC version.
 
 ## Usage
