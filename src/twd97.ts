@@ -24,11 +24,11 @@ export class TWD97 extends Settings {
     const k0 = this.k0; // scaling size 
 
     const dx = this.dx; // horizontal coordinate offset
-    const dy = this.dy; // Vertical coordinate offset
+    // const dy = this.dy; // Vertical coordinate offset
 
     const e: number = Math.sqrt(1 - (b * b) / (a * a));
 
-    const f: number = (a - b) / a; // flat rate
+    // const f: number = (a - b) / a; // flat rate
 
     const n: number = (a - b) / (a + b);
 
@@ -49,11 +49,11 @@ export class TWD97 extends Settings {
 
     const alpha7: number = (1522256789 / 1383782400) * n ** 7 - (16759934899 / 3113510400) * n ** 8 + (1315149374443 / 221405184000) * n ** 9 + (71809987837451 / 3629463552000) * n ** 10;
 
-    const alpha8: number = (1424729850961 / 743921418240) * n ** 8 - (256783708069 / 25204608000) * n ** 9 + (2468749292989890 / 203249958912000) * n ** 10;
+    // const alpha8: number = (1424729850961 / 743921418240) * n ** 8 - (256783708069 / 25204608000) * n ** 9 + (2468749292989890 / 203249958912000) * n ** 10;
 
-    const alpha9: number = (21091646195357 / 6080126976000) * n ** 9 - (67196182138355800 / 3379030566912000) * n ** 10;
+    // const alpha9: number = (21091646195357 / 6080126976000) * n ** 9 - (67196182138355800 / 3379030566912000) * n ** 10;
 
-    const alpha10: number = (77911515623232800 / 12014330904576000) * n ** 10;
+    // const alpha10: number = (77911515623232800 / 12014330904576000) * n ** 10;
 
     // Load Latitude and Longitude
     const latr: number = lat * Math.PI / 180; // radian
@@ -63,10 +63,10 @@ export class TWD97 extends Settings {
     const confLat: number = Math.atan(Math.sinh(Math.asinh(Math.tan(latr)) - e * Math.atanh(e * Math.sin(latr))));
 
     // sigma
-    const sigma: number = Math.sinh(e * Math.atanh(e * Math.tan(latr) / Math.sqrt(1 + Math.tan(latr) ** 2)));
+    // const sigma: number = Math.sinh(e * Math.atanh(e * Math.tan(latr) / Math.sqrt(1 + Math.tan(latr) ** 2)));
 
     // tau
-    const tau: number = Math.tan(latr);
+    // const tau: number = Math.tan(latr);
     const taup: number = Math.tan(confLat);
 
     const xip: number = Math.atan(taup / Math.cos(Dlngr));
@@ -80,8 +80,6 @@ export class TWD97 extends Settings {
     const easting: number = k0 * AA * eta;
     const northing: number = k0 * AA * xi;
 
-    const NSDirection: number = 1;
-    const WEDirection: number = 1;
     const northingFix97: number = Math.round(northing);
     const eastingFix97: number = Math.round(dx + (easting * 1));
 
