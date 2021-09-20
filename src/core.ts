@@ -1,11 +1,7 @@
 import { Settings } from './utils';
 import { TWD97 } from './twd97';
 import { WGS84 } from './wgs84';
-import { 
-  BuilderOptions,
-  WGS84ConvertData,
-  TWD97ConvertData
-} from './interfaces/core.interface';
+import { BuilderOptions } from './interfaces/core.interface';
 
 export class Trans97 extends Settings {
 

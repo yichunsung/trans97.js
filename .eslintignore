@@ -4,5 +4,8 @@ node_modules
 dist
 # don't lint nyc coverage output
 coverage
-
+# eslint settings
 .eslintrc.js
+# example and build folder
+example
+lib
