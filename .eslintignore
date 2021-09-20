@@ -9,3 +9,5 @@ coverage
 # example and build folder
 example
 lib
+# config
+jest.config.js
